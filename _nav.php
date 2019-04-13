@@ -9,12 +9,21 @@
             <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : '' ?>">
                 <a class="nav-link" href="index.php">Home </a>
             </li>
+            
+            <?php
+                if (!isset($_SESSION['user'])) {
+            ?>
+            
             <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'register.php' ? 'active' : '' ?>">
                 <a class="nav-link" href="register.php">Register</a>
             </li>
             <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'login.php' ? 'active' : '' ?>">
                 <a class="nav-link" href="login.php">Login</a>
             </li>
+            <?php
+            }
+            ?>
+            
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

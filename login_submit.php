@@ -28,7 +28,6 @@ if (strtolower($_SERVER['REQUEST_METHOD']) == 'post') {
     exit(200);
     $conn = null; 
     }else{
-    die("password_verify didn't work");
     header('Location: login.php');
     }
     }
